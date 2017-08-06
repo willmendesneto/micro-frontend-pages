@@ -1,0 +1,29 @@
+version: '2'
+
+services:
+  
+  micro-frontend-home-page:
+    container_name: micro-frontend-home-page
+    build: home-page
+
+  micro-frontend-first-page:
+    container_name: micro-frontend-first-page
+    build: first-page
+
+  micro-frontend-second-page:
+    container_name: micro-frontend-second-page
+    build: second-page
+
+  micro-frontend-nginx:
+    container_name: micro-frontend-nginx
+    build: nginx
+    ports:
+      - "8888:80"
+    links:
+      - micro-frontend-second-page
+      - micro-frontend-first-page
+      - micro-frontend-home-page
+    depends_on:
+      - micro-frontend-second-page
+      - micro-frontend-first-page
+      - micro-frontend-home-page
