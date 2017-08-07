@@ -8,6 +8,7 @@ var server = http.createServer(function (request, response) {
   response.write(`
     <h1>Second page</h1>
     <a href="/">Back to home page</a>
+    <a href="/first">First page</a>
   `);  
   response.end();
 });
