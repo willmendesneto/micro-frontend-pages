@@ -14,16 +14,24 @@ services:
     container_name: micro-frontend-second-page
     build: second-page
 
+  micro-frontend-not-found-page:
+    container_name: micro-frontend-not-found-page
+    build: not-found-page
+
   micro-frontend-nginx:
     container_name: micro-frontend-nginx
     build: nginx
+    volumes:
+      - ./assets:/var/www
     ports:
       - "8888:80"
     links:
       - micro-frontend-second-page
       - micro-frontend-first-page
       - micro-frontend-home-page
+      - micro-frontend-not-found-page
     depends_on:
       - micro-frontend-second-page
       - micro-frontend-first-page
       - micro-frontend-home-page
+      - micro-frontend-not-found-page
