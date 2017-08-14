@@ -1,18 +1,14 @@
-var http = require('http');
+const express = require('express');
 
+const app = express();
 const PORT = 3000;
 
-var server = http.createServer(function (request, response) {
+app.set('views', __dirname + '/views')
 
-  response.writeHeader(200, {"Content-Type": "text/html"});  
-  response.write(`
-    <h1>Second page</h1>
-    <a href="/">Back to home page</a>
-    <a href="/first">First page</a>
-  `);  
-  response.end();
+app.get('/second', (req, res) => {
+  res.sendFile(__dirname + '/views/index.html');
 });
 
-server.listen(PORT);
-
-console.log(`Second server is up and running at http://127.0.0.1:${PORT}/`);
+app.listen(PORT, () => {
+  console.log(`Second server is up and running at http://127.0.0.1:${PORT}/`);
+});

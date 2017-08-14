@@ -4,6 +4,11 @@ EXPOSE 3000
 
 WORKDIR /app
 
+COPY package.json .
+COPY yarn.lock .
+
+RUN yarn install -s --no-progress
+
 COPY . .
 
 CMD ["node", "index.js"]
