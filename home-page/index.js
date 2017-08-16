@@ -1,19 +1,15 @@
-var http = require('http');
 
+const express = require('express');
+
+const app = express();
 const PORT = 5000;
 
-var server = http.createServer(function (request, response) {
-  response.writeHeader(200, {"Content-Type": "text/html"});  
-  response.write(`
-    <h1>Home page</h1>
-    <p>This is a simple image accessing 'static' endpoint</p>
-    <img src="/static/images/horse.png" />
-    <a href="/first">First page</a><br/>
-    <a href="/second">Second page</a>
-  `);  
-  response.end();
+app.set('views', __dirname + '/views')
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/views/index.html');
 });
 
-server.listen(PORT);
-
-console.log(`Home server is up and running at http://127.0.0.1:${PORT}/`);
+app.listen(PORT, () => {
+  console.log(`First server is up and running at http://127.0.0.1:${PORT}/`);
+});
