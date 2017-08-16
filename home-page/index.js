@@ -11,5 +11,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`First server is up and running at http://127.0.0.1:${PORT}/`);
+  console.log(`Home page server is up and running at http://127.0.0.1:${PORT}/`);
 });
