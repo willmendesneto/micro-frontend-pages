@@ -6,7 +6,7 @@ const PORT = 6000;
 
 app.set('views', __dirname + '/views')
 
-app.get('/', (req, res) => {
+app.get('/not-found', (req, res) => {
   res.sendFile(__dirname + '/views/index.html');
 });
 
