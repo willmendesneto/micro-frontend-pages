@@ -38,6 +38,7 @@
     "@nguniversal/express-engine": "^1.0.0-beta.3",
     "@nguniversal/module-map-ngfactory-loader": "^1.0.0-beta.3",
     "core-js": "^2.4.1",
+    "response-time": "^2.3.2",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.14"
   },

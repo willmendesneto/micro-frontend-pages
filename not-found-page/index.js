@@ -1,9 +1,12 @@
 
 const express = require('express');
+const responseTime = require('response-time');
 
 const app = express();
 
-app.set('views', __dirname + '/views')
+app.use(responseTime());
+
+app.set('views', __dirname + '/views');
 
 app.get('/not-found', (req, res) => {
   res.sendFile(__dirname + '/views/index.html');

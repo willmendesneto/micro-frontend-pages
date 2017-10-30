@@ -1,7 +1,11 @@
 const express = require('express');
 
+const responseTime = require('response-time');
+
 const app = express();
 const PORT = 8000;
+
+app.use(responseTime());
 
 app.use('/static', express.static('static'));
 app.set('views', __dirname + '/views')
