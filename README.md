@@ -9,6 +9,8 @@ Please make sure that you have Docker and Docker compose installed in your machi
 
 ```bash
 $ docker-compose up
+# or
+$ docker-compose up --build --force-recreate # force build the image and recreate the container
 ```
 
 And, after that, you'll can check the performance of Docker images using `docker stats` command.

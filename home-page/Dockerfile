@@ -5,10 +5,12 @@ EXPOSE 5000
 WORKDIR /app
 
 COPY package.json .
-COPY yarn.lock .
 
-RUN yarn install -s --no-progress
+RUN npm install -s --no-progress
 
 COPY . .
 
-CMD ["node", "index.js"]
+RUN npm run build:dynamic \
+  && rm -rf src .angular-cli.json .gitignore .nvmrc Dockerfile *.ts tsconfig.json webpack.server.config.js
+
+CMD ["npm", "run", "serve:dynamic"]
