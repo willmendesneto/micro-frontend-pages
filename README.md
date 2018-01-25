@@ -19,6 +19,19 @@ And, after that, you'll can check the performance of Docker images using `docker
 Every folder is part of the Micro Frontend Pages demo project. In this project we have 4 folders with connected content.
 
 
+### Monolith
+
+The folder `monolith` is the default page of our project, so when you run the project using the commands:
+
+```bash
+nvm use # or make sure you are using NodeJS v8.1.4
+npm install
+npm start
+```
+
+and access `http://localhost:8000` you will see the web application with links for all other pages. This is the legacy code we are using as a base for our migration from monolith to microfrontend `\o/`!
+
+
 ### NGinx
 
 NGinx is being used to make a reverse proxy, connecting every single page as only one application for the users. It's connected with all pages and related projects.
