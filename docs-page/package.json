@@ -1,7 +1,7 @@
 {
-  "name": "home-page",
+  "name": "docs-page",
   "version": "1.0.0",
-  "description": "Microfrontend workshop - Server side render project for Home Page component",
+  "description": "Microfrontend workshop - Server side render project for Docs Page component",
   "main": "server.js",
   "scripts": {
     "dev": "node server.js",
