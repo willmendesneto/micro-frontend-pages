@@ -1,7 +1,7 @@
 {
-  "name": "home-page",
+  "name": "item-page",
   "version": "1.0.0",
-  "description": "Microfrontend workshop - Server side render project for Home Page component",
+  "description": "Microfrontend workshop - Server side render project for List Item Page component",
   "main": "server.js",
   "scripts": {
     "dev": "node server.js",

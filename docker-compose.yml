@@ -1,22 +1,27 @@
 version: '2'
 
 services:
+
+  micro-frontend-docs-page:
+    container_name: micro-frontend-docs-page
+    build: docs-page
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+
+  micro-frontend-items-page:
+    container_name: micro-frontend-items-page
+    build: items-page
+    environment:
+      - NODE_ENV=production
+      - PORT=4000
   
   micro-frontend-home-page:
     container_name: micro-frontend-home-page
     build: home-page
-
-  micro-frontend-first-page:
-    container_name: micro-frontend-first-page
-    build: first-page
-
-  micro-frontend-second-page:
-    container_name: micro-frontend-second-page
-    build: second-page
-
-  micro-frontend-not-found-page:
-    container_name: micro-frontend-not-found-page
-    build: not-found-page
+    environment:
+      - NODE_ENV=production
+      - PORT=5000
 
   micro-frontend-nginx:
     container_name: micro-frontend-nginx
@@ -26,12 +31,10 @@ services:
     ports:
       - "8888:80"
     links:
-      - micro-frontend-second-page
-      - micro-frontend-first-page
       - micro-frontend-home-page
-      - micro-frontend-not-found-page
+      - micro-frontend-docs-page
+      - micro-frontend-items-page
     depends_on:
-      - micro-frontend-second-page
-      - micro-frontend-first-page
       - micro-frontend-home-page
-      - micro-frontend-not-found-page
+      - micro-frontend-docs-page
+      - micro-frontend-items-page
