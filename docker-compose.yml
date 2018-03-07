@@ -23,6 +23,13 @@ services:
       - NODE_ENV=production
       - PORT=5000
 
+  micro-frontend-checkout-page:
+    container_name: micro-frontend-checkout-page
+    build: checkout-page
+    environment:
+      - NODE_ENV=production
+      - PORT=6000
+
   micro-frontend-nginx:
     container_name: micro-frontend-nginx
     build: nginx
@@ -34,7 +41,9 @@ services:
       - micro-frontend-home-page
       - micro-frontend-docs-page
       - micro-frontend-items-page
+      - micro-frontend-checkout-page
     depends_on:
       - micro-frontend-home-page
       - micro-frontend-docs-page
       - micro-frontend-items-page
+      - micro-frontend-checkout-page
