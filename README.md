@@ -8,7 +8,9 @@
 Please make sure that you have Docker and Docker compose installed in your machine. After that, just run the command
 
 ```bash
-$ docker-compose up
+$ docker-compose up 
+# or "docker-compose up --build" 
+# if you want to rebuild the containers
 ```
 
 And, after that, you'll can check the performance of Docker images using `docker stats` command.
@@ -42,14 +44,18 @@ NGinx is being used to make a reverse proxy, connecting every single page as onl
 The folder `home-page` is the default page of our project, so when you run the containers using `docker-compose up` command and access `http://localhost:8888` you will see the main page or our project with links for all other pages
 
 
-### First page
+### Docs
 
-The folder `first-page` is the first page of our project. The page is quite simple for now, but that's the first state of our project. You can access the page accessing `http://localhost:8888/first`. 
+The folder `docs-page` is the docs page of our project. The page is quite simple for now and it's one of the state in our project. You can access the page accessing `http://localhost:8888/docs`.
+
+### Checkout
+
+The folder `checkout-page` is the checkout page of our project. The page is quite simple for now and it's one of the state in our project. You can access the page accessing `http://localhost:8888/checkout`.
 
 
-### Second page
+### Categories page
 
-The folder `second-page` is the second page of our project. The page is quite simple for now, but that's the second state of our project. You can access the page accessing `http://localhost:8888/second`.
+The folder `items-page` is the list of items page of our project. The page has a list of items by category, linking to a specific page for a item in our project. You can access the list page accessing `http://localhost:8888/items` and the list item page acessing `http://localhost:8888/items/:id`.
 
 
 ## Author
