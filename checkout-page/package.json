@@ -1,0 +1,28 @@
+{
+  "name": "checkout-page",
+  "version": "1.0.0",
+  "description": "Microfrontend workshop - Server side render project for Checkout Page component",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "NODE_ENV=production node server.js",
+    "build": "next build",
+    "deploy": "npm run build && now --dotenv --public"
+  },
+  "keywords": [],
+  "author": "Wilson Mendes",
+  "license": "ISC",
+  "dependencies": {
+    "@zeit/next-sass": "^0.1.1",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "micro-frontend-react-pages": "0.0.5",
+    "next": "^5.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.7.2",
+    "now-cli": "0.0.0"
+  }
+}
