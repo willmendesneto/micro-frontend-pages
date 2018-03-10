@@ -1,6 +1,6 @@
 # Micro Frontend Pages
 
-> Simulate a micro frontend project using NodeJS and NGinx Reverse Proxy in Alpine Docker images
+> Simulate a micro frontend project using NodeJS, React and NGinx Reverse Proxy in Alpine Docker images
 
 This project is based on [my talk at JSConf.Asia 2018 about Micro Frontend applications](https://goo.gl/KK7K4N). 
 
