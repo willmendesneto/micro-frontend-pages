@@ -1,24 +1,29 @@
 version: '2'
 
 services:
-
   micro-frontend-docs-page:
     container_name: micro-frontend-docs-page
     build: docs-page
+    networks:
+      - local-network
     environment:
       - NODE_ENV=production
-      - PORT=3000
+      - PORT=5000
 
   micro-frontend-items-page:
     container_name: micro-frontend-items-page
     build: items-page
+    networks:
+      - local-network
     environment:
       - NODE_ENV=production
-      - PORT=4000
+      - PORT=5000
   
   micro-frontend-home-page:
     container_name: micro-frontend-home-page
     build: home-page
+    networks:
+      - local-network
     environment:
       - NODE_ENV=production
       - PORT=5000
@@ -26,9 +31,11 @@ services:
   micro-frontend-checkout-page:
     container_name: micro-frontend-checkout-page
     build: checkout-page
+    networks:
+      - local-network
     environment:
       - NODE_ENV=production
-      - PORT=6000
+      - PORT=5000
 
   micro-frontend-nginx:
     container_name: micro-frontend-nginx
@@ -37,13 +44,13 @@ services:
       - ./assets:/var/www
     ports:
       - "8888:80"
-    links:
-      - micro-frontend-home-page
-      - micro-frontend-docs-page
-      - micro-frontend-items-page
-      - micro-frontend-checkout-page
+    networks:
+      - local-network
     depends_on:
       - micro-frontend-home-page
       - micro-frontend-docs-page
       - micro-frontend-items-page
       - micro-frontend-checkout-page
+
+networks:
+  local-network:
