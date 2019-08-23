@@ -7,6 +7,10 @@ This project is based on [my talk at JSConf.Asia 2018 about Micro Frontend appli
 - Slides: https://goo.gl/51sDkh
 - Youtube video: https://goo.gl/KK7K4N
 
+## Examples of this project using Angular
+
+To check this example using Angular in [this link](http://bit.ly/ngx-micro-frontend-pages)
+
 ## Setup
 
 Please make sure that you have Docker and Docker compose installed in your machine. After that, just run the command
