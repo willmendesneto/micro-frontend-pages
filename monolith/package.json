@@ -22,7 +22,7 @@
     "react-dom": "^16.2.0"
   },
   "devDependencies": {
-    "node-sass": "^4.7.2",
+    "node-sass": "^4.13.1",
     "now-cli": "0.0.0"
   }
 }
