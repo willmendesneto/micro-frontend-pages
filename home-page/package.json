@@ -15,7 +15,7 @@
   "dependencies": {
     "@zeit/next-sass": "^0.1.1",
     "dotenv": "^4.0.0",
-    "express": "^4.16.2",
+    "express": "^4.17.3",
     "micro-frontend-react-pages": "0.0.5",
     "next": "^5.0.0",
     "react": "^16.2.0",
